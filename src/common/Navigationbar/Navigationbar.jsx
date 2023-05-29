@@ -65,7 +65,7 @@ export const Navigationbar = () => {
     {
       label: "Logout",
       icon: "pi pi-fw pi-power-off",
-      visible: AuthenticationState.Unauthenticated ? true : false,
+      //visible: AuthenticationState.Unauthenticated ? true : false,
       //command: () => {
       //  setLogoutFlg(true);
       //},
