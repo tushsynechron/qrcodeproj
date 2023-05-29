@@ -49,7 +49,7 @@ const StepFive = () => {
         <p>{content.p2}</p>
         <p className="mb-4">
           {content.p3}
-          <img src={icon} height="25px" width="25px"></img> {content.p3_e}
+          <img src={icon} alt="img" height="25px" width="25px"></img> {content.p3_e}
         </p>
         <ImageWrapper path={img_1} />
         <p className="mb-4">{parse(content.p4 ? content.p4 : "")}</p>
@@ -61,7 +61,7 @@ const StepFive = () => {
         <p className="mb-4">{parse(content.p8 ? content.p8 : "")}</p>
         <ImageWrapper path={img_4} />
         <p className="mt-4">
-          {content.p9} <img src={img_5} height="25px" width="25px"></img>{" "}
+          {content.p9} <img src={img_5} alt="img" height="25px" width="25px"></img>{" "}
           {content.p9_e}{" "}
         </p>
         {/* <ImageWrapper path={img_5}/> */}

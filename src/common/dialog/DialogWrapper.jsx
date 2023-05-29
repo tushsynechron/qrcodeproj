@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
-import {useSelector, useDispatch} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import { Dropdown } from 'primereact/dropdown';
 import languageAction from '../../stores/actions/languageAction'
 
@@ -20,7 +20,7 @@ export const DialogWrapper = () =>{
 
     useEffect(() => {
         dispatch(languageAction(selectedLanguage?.name))
-      }, [selectedLanguage])
+      }, [selectedLanguage, dispatch])
 
       const footerContent = (
         <div>

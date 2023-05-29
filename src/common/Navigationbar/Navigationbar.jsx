@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Menubar } from "primereact/menubar";
-import { AzureAD, AuthenticationState } from "react-aad-msal";
+//import { AzureAD, AuthenticationState } from "react-aad-msal";
 import { DialogWrapper } from "../dialog/DialogWrapper";
-import { authProvider } from "../../configurations/authProvider";
+//import { authProvider } from "../../configurations/authProvider";
 
 export const Navigationbar = () => {
   const [showLanguageDialog, setShowLanguageDialog] = useState(false);
-  const [logoutFlg, setLogoutFlg] = useState(false);
-  const [username, setUsername] = useState('')
+  //const [logoutFlg, setLogoutFlg] = useState(false);
+  //const [username, setUsername] = useState('')
   const items = [
     {
       label: "Home",
@@ -59,16 +59,16 @@ export const Navigationbar = () => {
       ],
     },
     {
-      label: `Welcome ${username}`,
+      label: `Welcome`,
       icon: "pi pi-fw pi-user",
     },
     {
       label: "Logout",
       icon: "pi pi-fw pi-power-off",
       visible: AuthenticationState.Unauthenticated ? true : false,
-      command: () => {
-        setLogoutFlg(true);
-      },
+      //command: () => {
+      //  setLogoutFlg(true);
+      //},
     },
   ];
 
