@@ -45,7 +45,7 @@ background-color: #0078d4;
 @media screen and (max-device-width: 480px)
   and (orientation: portrait) {
   .header_title {
-    margin-top: -140px;
+    margin-top: -180px;
     margin-bottom:10px;
   }
 }
@@ -63,8 +63,8 @@ background-color: #0078d4;
 @media screen
   and (max-device-width: 640px) {
   .header_title {
-    margin-top: -140px;
-    margin-bottom:60px;
+    margin-top: -180px;
+    margin-bottom:100px;
   }
 }
 
@@ -72,8 +72,8 @@ background-color: #0078d4;
 @media screen and (min-device-width: 320px)
   and (-webkit-min-device-pixel-ratio: 2) {
   .header_title {
-    margin-top: -140px;
-    margin-bottom:10px;
+    margin-top: -180px;
+    margin-bottom:100px;
   }
 }
 
@@ -82,7 +82,7 @@ background-color: #0078d4;
   and (device-width: 320px)
   and (-webkit-min-device-pixel-ratio: 2) {
   .header_title {
-    margin-top: -140px;
+    margin-top: -180px;
     margin-bottom:10px;
   }
 }
@@ -92,7 +92,7 @@ background-color: #0078d4;
   and (min-device-width: 375px)
   and (-webkit-min-device-pixel-ratio: 3) {
   .header_title {
-    margin-top: -140px;
+    margin-top: -180px;
     margin-bottom:10px;
   }
 };
