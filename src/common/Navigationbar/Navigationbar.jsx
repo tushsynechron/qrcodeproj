@@ -16,6 +16,7 @@ export const Navigationbar = () => {
     {
       label: "Select Language",
       icon: "pi pi-fw pi-language",
+      visible: false,
       command: () => {
         setShowLanguageDialog(true);
       },
