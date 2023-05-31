@@ -72,39 +72,11 @@ const Checklist = () => {
             header={content.tableHeader_2}
             itemTemplate={itemTemplate}
           />
-
-          {/* <DataTable
-            className="mt-4"
-            value={content.arr}
-            showGridlines
-            tableStyle={{ minWidth: "50rem" }}
-          >
-            <Column field="id" header=""></Column>
-            <Column
-              field="description"
-              header={content.tableHeader}
-              body={listBodyTemplate}
-            ></Column>
-          </DataTable>
-
-          <DataTable
-            className="mt-6"
-            value={content.arr2}
-            showGridlines
-            tableStyle={{ minWidth: "50rem" }}
-          >
-            <Column field="id" header=""></Column>
-            <Column
-              field="description"
-              header={content.tableHeader_2}
-              body={listBodyTemplate}
-            ></Column>
-          </DataTable> */}
         </div>
-
-        <div className="mt-6 pb-2 text-center">
+        <div className="mt-6 text-center">
           {content.footer} <Footer content={content} />
         </div>
+        {renderButtons(content?.btnInfo, false)}
       </div>
     </>
   );
