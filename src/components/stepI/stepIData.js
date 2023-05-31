@@ -37,7 +37,7 @@ export const stepIData = {
     note_1:"<b>VEUILLEZ NOTER :</b> Vous devez vous connecter à votre réseau internet sans fil à domicile <b>avant d'effectuer les étapes ci-dessous.</b> L’icône du Wi-Fi sera située en bas et à droite de l’écran. Sélectionnez votre réseau sans fil parmi la liste et saisissez le mot de passe de votre réseau pour vous connecter.",
     step1: "<b>Étape 1 – </b>Dans le coin inférieur gauche de l’écran, cliquez sur <b>Changer mon mot de passe.</b>",
     step2: "<b>Étape 2 – </b> Saisissez votre nom d’utilisateur AD et cliquez sur <b>Continuer.</b><p><b>***REMARQUE :</b> Des messages d’erreur instantanés SmartAudio pourraient alors s’afficher. Ignorez-les; ils ne vous empêchent pas de vous connecter à l’outil. C’est un problème connu que nous nous efforçons de résoudre.***</p>",
-    step3: "<b>Étape 3 – </b>Cliquez sur<b>Utiliser le mot de passe</b> et authentifiez-vous à l’aide de votre mot de passe AD actuel.",
+    step3: "<b>Étape 3 – </b>Cliquez sur <b>Utiliser le mot de passe</b> et authentifiez-vous à l’aide de votre mot de passe AD actuel.",
     step4: "<b>Étape 4 – </b>Cliquez sur <b>Modifier les mots de passe.</b>",
     step_5_6:"<b>Étapes 5 et 6 – </b>Après avoir modifié votre mot de passe AD, <b>cliquez sur votre nom</b> dans le coin supérieur droit de l’écran et sélectionnez <b>Déconnexion</b> dans le menu déroulant.",
     step7:

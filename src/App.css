@@ -1,6 +1,6 @@
 
 @font-face {
-  font-family: "TradeGothicBold";
+  font-family: "TradeGothicBold", "Roboto";
   src: local("TradeGothicBold"),
    url("./utils/fonts/trade-gothic-bold-condensed-20.ttf") format("truetype");
  }
