@@ -3,10 +3,10 @@ import { useSelector } from "react-redux";
 import { stepIData } from "./stepIData";
 import banner from "../../utils/images/header_img/checklist.jpg";
 import { Header } from "../../common/Header/Header";
-import { renderButtons } from "../helper";
 import { ImageWrapper } from "../../common/img/ImageWrapper";
 import { googleAnalytics } from "../../configurations/googleAnalyticsConfig";
 import parse from "html-react-parser";
+import { ButtonWrapper } from "../../common/button/ButtonWrapper";
 
 //images
 import step_1 from "../../utils/images/step_1_img/step_1.png";
@@ -40,6 +40,23 @@ const langEnglish = language.toLowerCase() === "english";
     }
   }, [language]);
 
+  const renderButtons = ()=>{
+    return(
+      <>
+        <div className="grid mt-4">
+          {content?.btnInfo?.map((ele, index) => {
+            const cls = index === 0 ? "col-12 md:col-6 lg:col-4" : "col-12 md:col-3 lg:col-4"
+            return (
+              <div key={ele} className={cls}>
+                <ButtonWrapper to={ele.to} text={ele.text}/>
+              </div>
+            );
+          })}
+        </div>
+      </>
+    )
+  }
+
   return (
     <>
       <Header
@@ -48,7 +65,7 @@ const langEnglish = language.toLowerCase() === "english";
         badgeValue={content.badgeValue}
       />
       <div className="ml-2 mr-2 md:ml-4 md:mr-4 lg:ml-8 lg:mr-8">
-        {renderButtons(content?.btnInfo, true)}
+      {renderButtons()}
         <h2 className="text-center frutiger_bold">{content.title}</h2>
         <p>{content.p1}</p>
         <p>{content.p2}</p>
@@ -106,7 +123,7 @@ const langEnglish = language.toLowerCase() === "english";
           <Footer content={content} />
         </div>
 
-        {renderButtons(content?.btnInfo, true)}
+        {renderButtons()}
       </div>
     </>
   );
