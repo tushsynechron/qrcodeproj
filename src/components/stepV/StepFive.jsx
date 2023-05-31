@@ -18,7 +18,6 @@ import img_5 from "../../utils/images/step_5_img/img_5.png";
 import icon from "../../utils/images/step_5_img/icon.jpg";
 import f_img_2 from "../../utils/images/step_5_img/french/f_img_2.png";
 
-
 const StepFive = () => {
   const language = useSelector((state) => state.language.language);
   const [content, setContent] = useState("");
@@ -44,12 +43,12 @@ const StepFive = () => {
       />
       <div className="ml-2 mr-2 md:ml-4 md:mr-4 lg:ml-8 lg:mr-8">
         {renderButtons(content?.btnInfo, true)}
-        <h1 className="text-center">{content.title}</h1>
+        <h2 className="text-center frutiger_bold">{content.title}</h2>
         <p>{content.p1}</p>
         <p>{content.p2}</p>
         <p className="mb-4">
           {content.p3}
-          <img src={icon} alt="img" height="25px" width="25px"></img> {content.p3_e}
+          <img src={icon} alt="icon" height="25px" width="25px"></img> {content.p3_e}
         </p>
         <ImageWrapper path={img_1} />
         <p className="mb-4">{parse(content.p4 ? content.p4 : "")}</p>
@@ -61,10 +60,9 @@ const StepFive = () => {
         <p className="mb-4">{parse(content.p8 ? content.p8 : "")}</p>
         <ImageWrapper path={img_4} />
         <p className="mt-4">
-          {content.p9} <img src={img_5} alt="img" height="25px" width="25px"></img>{" "}
+          {content.p9} <img src={img_5} alt="img5" height="25px" width="25px"></img>{" "}
           {content.p9_e}{" "}
         </p>
-        {/* <ImageWrapper path={img_5}/> */}
         <div className="mt-6 text-center">
           <Footer content={content} />
         </div>

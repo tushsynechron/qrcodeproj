@@ -28,7 +28,7 @@ export const stepIIIData = {
     footer_link_text: "Computer.Refresh@innovapost.com",
     footer_link_path: "http://localhost:3000",
     btnInfo: [
-      { to: "/step2", text: "Previous: Step 2" },
+      { to: "/step2", text: "Previous : Step 2" },
       { to: "/", text: "Homepage" },
       { to: "/step4", text: "Step 4" },
     ],
@@ -64,7 +64,7 @@ export const stepIIIData = {
   footer_link_path: "http://localhost:3000",
   footer_link_text_e:"pour obtenir de l’aide.",
     btnInfo: [
-      { to: "/step2", text: "Précédent: Étape 2" },
+      { to: "/step2", text: "Précédent : Étape 2" },
       { to: "/", text: "Page d'accueil" },
       { to: "/step4", text: "Étape 4" },
     ],

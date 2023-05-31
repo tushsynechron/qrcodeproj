@@ -1,5 +1,5 @@
 const initialState = {
-    language:'french'
+    language:'english'
 }
 
 const language = (state = initialState, action) => {

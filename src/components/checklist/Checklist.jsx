@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { DataTable } from "primereact/datatable";
-import { Column } from "primereact/column";
 import parse from "html-react-parser";
 import { Link } from "react-router-dom";
 import checklistBanner from "../../utils/images/header_img/checklist.jpg";
@@ -10,6 +8,8 @@ import { Header } from "../../common/Header/Header";
 import { renderButtons } from "../helper";
 import { googleAnalytics } from "../../configurations/googleAnalyticsConfig";
 import { Footer } from "../../common/footer/Footer";
+import { DataView } from "primereact/dataview";
+
 
 const Checklist = () => {
   const language = useSelector((state) => state.language.language);
@@ -27,18 +27,22 @@ const Checklist = () => {
     }
   }, [language]);
 
-  const listBodyTemplate = (arr) => {
+  const itemTemplate = (arr) => {
     return (
-      <>
-        <p>
-          <b>{arr.description}</b>
-        </p>
-        <ul>
-          {arr?.bullet_list?.map((ele) => {
-            return <li key={ele}>{parse(ele)}</li>;
-          })}
-        </ul>
-      </>
+      <div className="col-12">
+        <div className="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4">
+          <div className="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">
+            <div className="flex flex-column sm:align-items-start gap-3">
+              <b>{arr.id}) {arr.description}</b>
+              <ul className="mt-0 ml-2 md:ml:4 lg:ml-6">
+                {arr?.bullet_list?.map((ele) => {
+                  return <li key={ele}>{parse(ele)}</li>;
+                })}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     );
   };
 
@@ -51,10 +55,25 @@ const Checklist = () => {
       />
       <div className="ml-2 mr-2 md:ml-4 md:mr-4 lg:ml-8 lg:mr-8">
         {renderButtons(content?.btnInfo, false)}
-       
-        <div className="mt-2">{content.subtitle} <Link to="/step1">{content.subtitle_link}</Link>  {content.subtitle_e} </div>
+
         <div className="mt-2">
-          <DataTable
+          {content.subtitle} <Link to="/step1">{content.subtitle_link}</Link>{" "}
+          {content.subtitle_e}{" "}
+        </div>
+        <div className="mt-2">
+          <DataView
+            value={content.arr}
+            header={content.tableHeader}
+            itemTemplate={itemTemplate}
+          />
+          <br />
+          <DataView
+            value={content.arr2}
+            header={content.tableHeader_2}
+            itemTemplate={itemTemplate}
+          />
+
+          {/* <DataTable
             className="mt-4"
             value={content.arr}
             showGridlines
@@ -80,11 +99,12 @@ const Checklist = () => {
               header={content.tableHeader_2}
               body={listBodyTemplate}
             ></Column>
-          </DataTable>
+          </DataTable> */}
         </div>
-       
-        <div className="mt-6 pb-2 text-center">{content.footer} <Footer content = {content}/></div>
-        
+
+        <div className="mt-6 pb-2 text-center">
+          {content.footer} <Footer content={content} />
+        </div>
       </div>
     </>
   );

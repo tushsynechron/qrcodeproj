@@ -3,7 +3,7 @@ export const stepVIData = {
     header: "Additional Software Support",
     badgeValue: "Step 6",
     p1: "Need Additional Applications Support?",
-    p2: "Please review the additional support options below to ensure that nothing is missing from your new computer. If everything is in order, you are ready to return your old computer.",
+    p2: "Please review the <u>additional support</u> options below to ensure that nothing is missing from your new computer. If everything is in order, you are ready to return your old computer.",
     bullet_list: [
       "Missing Software",
       "Importing Browser Favorites",
@@ -16,7 +16,7 @@ export const stepVIData = {
     footer_link_text: "​​​​Computer.Refresh@innovapost.com",
     footer_link_path: "http://localhost:3000",
     btnInfo: [
-      { to: "/step5", text: "Previous: Step 5" },
+      { to: "/step5", text: "Previous : Step 5" },
       { to: "/", text: "Homepage" },
       { to: "/step7", text: "Step 7" },
     ],
@@ -29,7 +29,7 @@ export const stepVIData = {
     header: "Prise en charge d'applications supplémentaires",
     badgeValue: "Étape 6",
     p1: "Avez-vous besoin de soutien supplémentaire?",
-    p2: "Veuillez passer en revue les options de soutien supplémentaire ci-dessous. Si aucune d’entre elles ne s’applique, vous pouvez retourner votre ancien ordinateur.",
+    p2: "Veuillez passer en revue les options de <u>soutien supplémentaire</u> ci-dessous. Si aucune d’entre elles ne s’applique, vous pouvez retourner votre ancien ordinateur.",
     bullet_list: [
       "Autres applications installées",
       "Favoris du navigateur",
@@ -43,7 +43,7 @@ export const stepVIData = {
     footer_link_path: "http://localhost:3000",
     footer_link_text_e: "pour obtenir de l’aide.",
     btnInfo: [
-      { to: "/step5", text: "Précédent: Étape 5" },
+      { to: "/step5", text: "Précédent : Étape 5" },
       { to: "/", text: "Page d'accueil" },
       { to: "/step7", text: "Étape 7" },
     ],

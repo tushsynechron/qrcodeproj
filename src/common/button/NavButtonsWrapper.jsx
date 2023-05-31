@@ -7,7 +7,7 @@ export const NavButtonsWrapper = (props) => {
     <>
     <Button
       onClick={() => navigate(props.content.link)}
-      className="w-11 md:w-9 lg:w-4 border-noround button border-transparent"
+      className="w-11 md:w-9 lg:w-4 border-noround button border-transparent text-left"
       style={{ backgroundColor: "#0078d4" }}
       label={props.content.btnText}
     />

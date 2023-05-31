@@ -6,6 +6,7 @@ import { Header } from "../../common/Header/Header";
 import { renderButtons } from "../helper";
 import { googleAnalytics } from "../../configurations/googleAnalyticsConfig";
 import { Footer } from "../../common/footer/Footer";
+import parse from "html-react-parser";
 
 const StepII = () => {
   const language = useSelector((state)=> state.language.language);
@@ -30,12 +31,13 @@ const StepII = () => {
       <div className="ml-2 mr-2 md:ml-4 md:mr-4 lg:ml-8 lg:mr-8">
         {renderButtons(content?.btnInfo, true)}
         <div className="text-center">
-          <h1>{content.title}</h1>
+          
+          <h2 className="text-center frutiger_bold">{content.title}</h2>
         </div>
         <div className="flex justify-content-center">
           <ul>
             {content && content.bullet_list.map((ele) => {
-              return <li key={ele}>{ele}</li>;
+              return <li key={ele}>{parse(ele ? ele : "")}</li>;
             })}
           </ul>
         </div>

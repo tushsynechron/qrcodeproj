@@ -49,6 +49,7 @@ const langEnglish = language.toLowerCase() === "english";
       />
       <div className="ml-2 mr-2 md:ml-4 md:mr-4 lg:ml-8 lg:mr-8">
         {renderButtons(content?.btnInfo, true)}
+        <h2 className="text-center frutiger_bold">{content.title}</h2>
         <p>{content.p1}</p>
         <p>{content.p2}</p>
         <p>{parse(content.note_1 ? content.note_1 : "")}</p>
@@ -97,7 +98,7 @@ const langEnglish = language.toLowerCase() === "english";
         <p> {parse(content.note_2 ? content.note_2 : "")}</p>
         <ol type="1">
           {content?.number_bullets?.map((ele) => {
-            return <li>{ele}</li>;
+            return <li key={ele}>{ele}</li>;
           })}
         </ol>
 

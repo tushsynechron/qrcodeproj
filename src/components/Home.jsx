@@ -30,7 +30,7 @@ export const Home = () => {
         title={content.header}
         badgeValue={content.badgeValue}
       />
-      <div className="text-center mt-4 ml-2 mr-2 md:ml-4 md:mr-4 lg:ml-8 lg:mr-8">
+      <div className="text-center ml-2 mr-2 md:ml-4 md:mr-4 lg:ml-8 lg:mr-8">
         <p>
           <b>{content.b1}</b>
         </p>
@@ -41,15 +41,16 @@ export const Home = () => {
               className="responsive"
               src={home_env}
               alt="step1_1"
-              width="70%"
+              width="60%"
               height="300"
             />
+            
           ) : (
             <img
               className="responsive"
               src={f_img_home}
               alt="step1_1"
-              width="70%"
+              width="60%"
               height="300"
             />
           )}

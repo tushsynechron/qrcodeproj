@@ -4,6 +4,7 @@ import "primereact/resources/primereact.min.css";
 import "primeflex/primeflex.css";
 import 'primeicons/primeicons.css';
 import "./App.css";
+import "./utils/fonts/trade-gothic-bold-condensed-20.ttf"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -29,8 +30,9 @@ function App() {
   return (
     <>
       <div style={{ backgroundColor: "#eff6fc" }}>
+      <BrowserRouter>
         <Navigationbar/>
-        <BrowserRouter>
+        
           <Routes>
             <Route exact path="" Component={Home} />
             <Route path="/checklist" Component={Checklist} />

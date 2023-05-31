@@ -30,7 +30,7 @@ const StepVII = () => {
       <Header img={checklistBanner} title={content.header} badgeValue={content.badgeValue}/>
       <div className="ml-2 mr-2 md:ml-4 md:mr-4 lg:ml-8 lg:mr-8">
         {renderButtons(content?.btnInfo, false)}
-        <h1 className="text-center">{content.title}</h1>
+        <h2 className="text-center frutiger_bold">{content.title}</h2>
         <p>{content.p1}</p>
         <ol>
        {
@@ -39,9 +39,8 @@ const StepVII = () => {
             })
         }
        </ol>
-<p>{content.p2}</p>
-<p>{content.p3}</p>
-<iframe title= "microsoft forms" width="100%" height="480px" src="https://forms.office.com/r/2mbibK4exB?embed=true" frameborder="0" marginwidth="0" marginheight="0" style={{border: "none", maxWidth:"100%", maxHeight:"100vh"}} allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+<p>{parse(content.p2 ? content.p2 : "")}</p>
+<iframe title="Microsoft Forms" width="100%" height="480px" src="https://forms.office.com/r/2mbibK4exB?embed=true" frameborder="0" marginwidth="0" marginheight="0" style={{border: "none", maxWidth:"100%", maxHeight:"100vh"}} allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
 <div className="mt-6 text-center">
         <Footer content = {content}/>
         </div>

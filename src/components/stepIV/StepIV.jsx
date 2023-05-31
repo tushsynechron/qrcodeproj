@@ -45,7 +45,7 @@ const langEnglish = language.toLowerCase() === 'english';
       <Header img={banner} title= {content.header}  badgeValue={content.badgeValue}/>
       <div className="ml-2 mr-2 md:ml-4 md:mr-4 lg:ml-8 lg:mr-8">
         {renderButtons(content?.btnInfo, true)}
-       <h1>{content.title}</h1>
+       <h2 className="text-center frutiger_bold">{content.title}</h2>
        <p></p>
        <ol>
        {
@@ -54,11 +54,12 @@ const langEnglish = language.toLowerCase() === 'english';
             })
         }
        </ol>
-       <h1>{content.title2}</h1>
-        <p>{content.step1}</p>
+       <h2 className="frutiger_bold">{content.title2}</h2>
+        <p>{parse(content.step1 ? content.step1 : "")}</p>
         <div className="flex justify-content-center">
           <div className="w-full md:w-8 lg:w-6">
             <img
+            className="responsive"
               src={langEnglish ? img_1 : f_img_1}
               height="700"
               width="100%"
@@ -67,15 +68,15 @@ const langEnglish = language.toLowerCase() === 'english';
           </div>
         </div>
         {/* <ImageWrapper path={langEnglish ? img_1 : f_img_1}/> */}
-       <p>{content.step2}</p>
+       <p>{parse(content.step2 ? content.step2 : "")}</p>
        <ImageWrapper path={langEnglish ? img_2 : f_img_2}/>
-       <p>{content.step3}</p>
+       <p>{parse(content.step3 ? content.step3 : "")}</p>
        <ImageWrapper path={langEnglish ? img_3 : f_img_3}/>
-       <p>{content.step4}</p>
+       <p>{parse(content.step4 ? content.step4 : "")}</p>
        <ImageWrapper path={langEnglish ? img_4 : f_img_4}/>
        <p>{parse(content.step5 ? content.step5 : "")}</p>
        <ImageWrapper path={langEnglish ? img_5 : f_img_5}/>
-       <p>{content.step6}</p>
+       <p>{parse(content.step6 ? content.step6 : "")}</p>
        <ImageWrapper path={langEnglish ? img_6 : f_img_6}/>
        <div className="mt-6 text-center">
           <Footer content={content} />

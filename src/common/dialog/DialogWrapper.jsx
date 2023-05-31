@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
-import {useDispatch} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 import { Dropdown } from 'primereact/dropdown';
 import languageAction from '../../stores/actions/languageAction'
 
 
-export const DialogWrapper = () =>{
+export const DialogWrapper = ({oncloseDialog}) =>{
     const dispatch = useDispatch();
+    const lang = useSelector(state=>state.language.language)
     const [visible, setVisible] = useState(false);
-    const [selectedLanguage, setSelectedLanguage] = useState( { name: 'English', code: 'EN' });
     const languages = [
-        { name: 'English', code: 'EN' },
-        { name: 'French', code: 'FR' },
-    ];
+      { name: 'English', code: 'EN' },
+      { name: 'French', code: 'FR' },
+  ];
+    const [selectedLanguage, setSelectedLanguage] = useState( lang === 'French' ? languages[1] : { name: 'English', code: 'EN' });
+   
     useEffect(()=>{
       setVisible(true)
     },[])
@@ -21,20 +23,26 @@ export const DialogWrapper = () =>{
     useEffect(() => {
         dispatch(languageAction(selectedLanguage?.name))
       }, [selectedLanguage, dispatch])
+    
 
       const footerContent = (
         <div>
             {/* <Button label="No" icon="pi pi-times" onClick={() => setVisible(false)} className="p-button-text" /> */}
-            <Button className="w-full" label="OK" icon="pi pi-check" onClick={() => setVisible(false)} autoFocus />
+            <Button className="w-full" label="OK" icon="pi pi-check" onClick={() => handleOnHide()} autoFocus />
         </div>
     );
+
+    const handleOnHide =() =>{
+      setVisible(false);
+      oncloseDialog();
+    }
     
 
     return(
         <Dialog
         header="Choose Language"
         visible={visible}
-        onHide={() => setVisible(false)}
+        onHide={() =>handleOnHide()}
         style={{ width: "30vw" }}
         breakpoints={{ "960px": "75vw", "641px": "100vw" }}
         footer={footerContent}
