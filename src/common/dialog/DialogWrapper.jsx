@@ -18,12 +18,8 @@ export const DialogWrapper = ({oncloseDialog}) =>{
    
     useEffect(()=>{
       setVisible(true)
+     // dispatch(languageAction(selectedLanguage?.name))
     },[])
-
-    useEffect(() => {
-        dispatch(languageAction(selectedLanguage?.name))
-      }, [selectedLanguage, dispatch])
-    
 
       const footerContent = (
         <div>
@@ -33,6 +29,7 @@ export const DialogWrapper = ({oncloseDialog}) =>{
     );
 
     const handleOnHide =() =>{
+      dispatch(languageAction(selectedLanguage?.name))
       setVisible(false);
       oncloseDialog();
     }
