@@ -4,15 +4,15 @@ export const stepIIData = {
         title:"Microsoft Office (Outlook, Word, Excel, OneNote, PowerPoint)",
         badgeValue:"Step 2",
         bullet_list:[
-            "Launch <b>Word, Excel, OneNote and PowerPoint</b>to ensure they are functioning as expected",
+            "Launch <b>Word, Excel, OneNote and PowerPoint</b> to ensure they are functioning as expected",
             "Launch <b>Outlook</b> and check any shared mailboxes you previously had access to and try sending a test email",
           ],
           footer_text:
           "If you encounter any issues completing this step, please contact our Computer Refresh team for support: ",
         footer_link_text: "Computer.Refresh@innovapost.com",
-        footer_link_path: "http://localhost:3000",
+        footer_link_path: "Computer.Refresh@innovapost.com",
           btnInfo: [
-            { to: "/step1", text: "Previous : Step 1" },
+            { to: "/step1", text: "Previous: Step 1" },
             { to: "/", text: "Homepage" },
             { to: "/step3", text: "Step 3" },
           ]
@@ -27,8 +27,8 @@ export const stepIIData = {
           ],
           footer_text:
           "Si vous éprouvez des difficultés avec cette étape, écrivez à l’adresse",
-        footer_link_text: "computer.refresh@innovapost.com ",
-        footer_link_path: "http://localhost:3000",
+        footer_link_text: "Computer.Refresh@innovapost.com",
+        footer_link_path: "Computer.Refresh@innovapost.com",
         footer_link_text_e:"pour obtenir de l’aide.",
           btnInfo: [
             { to: "/step1", text: "Précédent : Étape 1" },

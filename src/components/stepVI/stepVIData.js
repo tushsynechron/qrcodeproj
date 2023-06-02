@@ -14,9 +14,9 @@ export const stepVIData = {
     footer_text:
       "If you encounter any issues completing this step, please contact our Computer Refresh team for support: ",
     footer_link_text: "​​​​Computer.Refresh@innovapost.com",
-    footer_link_path: "http://localhost:3000",
+    footer_link_path: "Computer.Refresh@innovapost.com",
     btnInfo: [
-      { to: "/step5", text: "Previous : Step 5" },
+      { to: "/step5", text: "Previous: Step 5" },
       { to: "/", text: "Homepage" },
       { to: "/step7", text: "Step 7" },
     ],
@@ -39,8 +39,8 @@ export const stepVIData = {
     p3: "Liens au documents mentionnés ci-dessus",
     footer_text:
       "Si vous éprouvez des difficultés avec cette étape, écrivez à l’adresse",
-    footer_link_text: "computer.refresh@innovapost.com ",
-    footer_link_path: "http://localhost:3000",
+    footer_link_text: "Computer.Refresh@innovapost.com",
+    footer_link_path: "Computer.Refresh@innovapost.com",
     footer_link_text_e: "pour obtenir de l’aide.",
     btnInfo: [
       { to: "/step5", text: "Précédent : Étape 5" },

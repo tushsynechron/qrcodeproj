@@ -26,9 +26,9 @@ export const stepIIIData = {
     footer_text:
       "If you encounter any issues completing this step, please contact our Computer Refresh team for support: ",
     footer_link_text: "Computer.Refresh@innovapost.com",
-    footer_link_path: "http://localhost:3000",
+    footer_link_path: "Computer.Refresh@innovapost.com",
     btnInfo: [
-      { to: "/step2", text: "Previous : Step 2" },
+      { to: "/step2", text: "Previous: Step 2" },
       { to: "/", text: "Homepage" },
       { to: "/step4", text: "Step 4" },
     ],
@@ -60,8 +60,8 @@ export const stepIIIData = {
     p10: "Une fois que vous avez copié vos fichiers sur le disque dur externe ou la clé USB, connectez le support de stockage à votre nouvel ordinateur, puis saisissez le mot de passe que vous avez créé pour chiffrer le lecteur et copiez vos fichiers et dossiers aux endroits appropriés.",
     footer_text:
     "Si vous éprouvez des difficultés avec cette étape, écrivez à l’adresse",
-  footer_link_text: "computer.refresh@innovapost.com ",
-  footer_link_path: "http://localhost:3000",
+  footer_link_text: "Computer.Refresh@innovapost.com",
+  footer_link_path: "Computer.Refresh@innovapost.com",
   footer_link_text_e:"pour obtenir de l’aide.",
     btnInfo: [
       { to: "/step2", text: "Précédent : Étape 2" },

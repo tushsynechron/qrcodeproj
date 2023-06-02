@@ -21,9 +21,9 @@ export const stepIData = {
     footer_text:
       "If you encounter any issues completing this step, please contact our Computer Refresh team for support: ",
     footer_link_text: "Computer.Refresh@innovapost.com",
-    footer_link_path: "http://localhost:3000",
+    footer_link_path: "Computer.Refresh@innovapost.com",
     btnInfo: [
-      { to: "/checklist", text: "Previous : Refesh Checklist" },
+      { to: "/checklist", text: "Previous: Refesh Checklist" },
       { to: "/", text: "Homepage" },
       { to: "/step2", text: "Step 2" },
     ],
@@ -50,8 +50,8 @@ export const stepIData = {
     ],
     footer_text:
     "Si vous éprouvez des difficultés avec cette étape, écrivez à l’adresse",
-  footer_link_text: "computer.refresh@innovapost.com ",
-  footer_link_path: "http://localhost:3000",
+  footer_link_text: "Computer.Refresh@innovapost.com",
+  footer_link_path: "Computer.Refresh@innovapost.com",
   footer_link_text_e:"pour obtenir de l’aide.",
     btnInfo: [
       { to: "/checklist", text: "Précédent : Actualiser la liste de contrôle" },

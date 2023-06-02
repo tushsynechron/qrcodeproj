@@ -17,9 +17,9 @@ english:{
     footer_text:
       "If you encounter any issues completing this step, please contact our Computer Refresh team for support: ",
     footer_link_text: "Computer.Refresh@innovapost.com",
-    footer_link_path: "http://localhost:3000",
+    footer_link_path: "Computer.Refresh@innovapost.com",
     btnInfo: [
-        { to: "/step4", text: "Previous : Step 4" },
+        { to: "/step4", text: "Previous: Step 4" },
         { to: "/", text: "Homepage" },
         { to: "/step6", text: "Step 6" },
       ],
@@ -40,8 +40,8 @@ french:{
     p9:"8. L'icône du RPV affiche aussi un cadenas pour indiquer qu'il s'agit d'une connexion sécurisée au RPV.",
     footer_text:
     "Si vous éprouvez des difficultés avec cette étape, écrivez à l’adresse",
-  footer_link_text: "computer.refresh@innovapost.com ",
-  footer_link_path: "http://localhost:3000",
+  footer_link_text: "Computer.Refresh@innovapost.com",
+  footer_link_path: "Computer.Refresh@innovapost.com",
   footer_link_text_e:"pour obtenir de l’aide.",
     btnInfo: [
         { to: "/step4", text: "Précédent : Étape 4" },
