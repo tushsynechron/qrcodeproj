@@ -36,7 +36,7 @@ const StepII = () => {
         </div>
         <div className="flex justify-content-center">
           <ul>
-            {content && content.bullet_list.map((ele) => {
+            {content?.bullet_list?.map((ele) => {
               return <li key={ele}>{parse(ele ? ele : "")}</li>;
             })}
           </ul>
