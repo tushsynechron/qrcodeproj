@@ -35,8 +35,19 @@ const Checklist = () => {
             <div className="flex flex-column sm:align-items-start gap-3">
               <b>{arr.id}) {arr.description}</b>
               <ul className="mt-0 ml-2 md:ml:4 lg:ml-6">
-                {arr?.bullet_list?.map((ele) => {
-                  return <li key={ele}>{parse(ele)}</li>;
+              {arr?.bullet_list?.map((ele) => {
+                  return (
+                    <li key={ele}>
+                      {typeof ele !== "object" ? (
+                        parse(ele)
+                      ) : (
+                        <>
+                          {parse(ele.bu_list_p)}{" "}
+                          <Link to={ele.link}>{ele.link_text}</Link>
+                        </>
+                      )}
+                    </li>
+                  );
                 })}
               </ul>
             </div>

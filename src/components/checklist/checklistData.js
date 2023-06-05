@@ -14,7 +14,11 @@ export const checkListData = {
         description: "Power on and log in to your new computer.",
         bullet_list: [
           "<b>At the office?</b> Log in using Wi-Fi as you normally would",
-          "<b>At home?</b> Using your old computer, refer to the instructions ‘Logging in to your new computer’ located on IT Central (link to IT Central provided in the shipment confirmation email from cpgwrefresh@compucom.com).",
+          {
+            bu_list_p:"<b>At home?</b> Using your old computer, refer to the instructions ‘Logging in to your new computer’ located in",
+            link_text:"located in Step 1",
+            link:"/step1"
+          },
           "Keep your new computer turned on and logged in for up to 2 days to ensure applications and data have time to synchronize",
         ],
       },
@@ -87,7 +91,11 @@ export const checkListData = {
         description:
           "PST Files (Archived Email Messages)",
           bullet_list: [
-            "If you have PST Files (archived email messages), they will need to be copied into your Outlook Online Archive folder. Instructions can be found in the <b>Computer Refresh Program section on IT Central.</b>",
+            {
+              bu_list_p: "If you have PST Files (archived email messages), they will need to be copied into your Outlook Online Archive folder. Instructions can be found on the",
+              link_text:"Additional Applications Support page.",
+              link:"/step6"
+            },
           ],
         },
       {
@@ -95,7 +103,11 @@ export const checkListData = {
         description:
           "Printers",
           bullet_list: [
-            "<b>Corporate printing</b> instructions can be found in the Print/Copy/Scan/Fax section on IT Central ",
+            {
+              bu_list_p: "<b>Corporate printing</b> instructions can be found on the",
+              link_text: "Additional Applications Support page.",
+              link: "/step6"
+            },
             "<b>Home printers</b> will need to be re-installed manually ",
           ],
         },
@@ -125,7 +137,11 @@ export const checkListData = {
         description: "Allumez votre ordinateur et ouvrez une session.",
         bullet_list: [
           "<b>Au bureau?</b>? Ouvrez une session à l’aide du Wi-Fi comme vous le feriez normalement.",
-          "<b>À la maison? </b> À partir de votre ancien ordinateur, consultez les directives « Se connecter à votre nouvel ordinateur » sur le Centre des TI (le lien URL vers le Centre des TI figure dans le courriel d’expédition qui a été envoyé par cpgwrefresh@compucom.com).",
+          {
+            bu_list_p: "<b>À la maison? </b> À partir de votre ancien ordinateur, consultez les directives « Se connecter à votre nouvel ordinateur » ",
+            link_text:"qui se trouvent dans l’Étape 1",
+            link:"/step1"
+          },
           "Gardez votre nouvel ordinateur allumé avec une session ouverte pendant jusqu’à deux jours afin de vous assurer que les applications et les données ont le temps de terminer la synchronisation.",
         ],
       },
@@ -198,7 +214,11 @@ export const checkListData = {
         description:
           "Fichiers PST (courriels archivés)",
           bullet_list: [
-            "Si vous avez des fichiers PST (courriels archivés), vous devrez les copier dans votre dossier Outlook - Archive en ligne. Instructions disponibles dans la section <b>Programme de renouvellement des ordinateurs du Centre des TI.</b>",
+            {
+              bu_list_p: "Si vous avez des fichiers PST (courriels archivés), vous devrez les copier dans votre dossier Outlook - Archive en ligne. Instructions disponibles dans la section",
+              link_text:"Prise en charge d’applications supplémentaires.",
+              link:"/step6"
+            },
           ],
         },
       {
@@ -206,7 +226,11 @@ export const checkListData = {
         description:
           "Imprimantes",
           bullet_list: [
-            "<b>Les directives d’impression de la Société </b> se trouvent dans la section Impression/photocopie/numérisation du Centre des TI.",
+            {
+              bu_list_p: "<b>Les directives d’impression de la Société </b> se trouvent dans la section",
+              link_text: "Prise en charge d’applications supplémentaires",
+              link: "/step6"
+            },
             "<b>Les imprimantes à domicile</b> devront être réinstallées manuellement.",
           ],
         },
