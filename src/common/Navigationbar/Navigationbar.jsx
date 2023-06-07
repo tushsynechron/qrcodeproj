@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Menubar } from "primereact/menubar";
-import { AuthenticationState } from "react-aad-msal";
+import { AzureAD, AuthenticationState } from "react-aad-msal";
 import { DialogWrapper } from "../dialog/DialogWrapper";
+import { authProvider } from "../../configurations/authProvider";
 import { useNavigate } from "react-router-dom";
 
 export const Navigationbar = () => {
   const navigate = useNavigate();
   const [showLanguageDialog, setShowLanguageDialog] = useState(false);
-  
+  const [logoutFlg, setLogoutFlg] = useState(false);
   const items = [
     {
       label: "Home",
@@ -68,14 +69,17 @@ export const Navigationbar = () => {
       ],
     },
     {
-      label: `Welcome`,
+      label: '',
       icon: "pi pi-fw pi-user",
-      visible: AuthenticationState.Unauthenticated ? false : true,
+      visible: AuthenticationState.Authenticated ? true : false,
     },
     {
       label: "Logout",
       icon: "pi pi-fw pi-power-off",
-      visible: AuthenticationState.Unauthenticated ? false : true,
+      visible: AuthenticationState.Authenticated ? true : false,
+      command: () => {
+        setLogoutFlg(true);
+      },
     },
   ];
 
@@ -85,19 +89,17 @@ export const Navigationbar = () => {
 
   return (
     <>
-      {/* <AzureAD provider={authProvider}>
+      <AzureAD provider={authProvider}>
         {({ login, logout, authenticationState, error, accountInfo }) => {
           if (authenticationState && AuthenticationState.Authenticated){
-            return (
-              <>
-                  {setUsername(accountInfo.account.userName)}
-                  {logoutFlg ? logout() : null}
-                  </>
-              );
+            items[3].label = `Welcome: ${accountInfo.account.userName}`
+            if(logoutFlg){
+              logout()
+            }
           }
         }
       }
-      </AzureAD> */}
+      </AzureAD>
       {showLanguageDialog ? <DialogWrapper oncloseDialog = {oncloseDialog} /> : <></>}
       <Menubar model={items} className="border-noround" />
     </>

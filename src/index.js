@@ -6,22 +6,18 @@ import reportWebVitals from './reportWebVitals';
 import rootReducer from './stores';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
-// import { AzureAD } from 'react-aad-msal';
-// import {authProvider} from './configurations/authProvider'
+import { AzureAD } from 'react-aad-msal';
+import {authProvider} from './configurations/authProvider'
 
 const store = createStore(
     rootReducer,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() 
+    window?._REDUX_DEVTOOLS_EXTENSION_ && window?._REDUX_DEVTOOLS_EXTENSION_() 
 )
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <AzureAD provider={authProvider} forceLogin={true}>
+  <AzureAD provider={authProvider} forceLogin={true}>
   <Provider store={store}><App /></Provider>
-  // </AzureAD>
+  </AzureAD>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

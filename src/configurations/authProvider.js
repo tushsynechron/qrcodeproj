@@ -3,9 +3,9 @@ import { MsalAuthProvider, LoginType } from 'react-aad-msal';
 // Msal Configurations
 const config = {
   auth: {
-    authority: 'https://login.microsoftonline.com/kaustubh3117gmail.onmicrosoft.com',
-    clientId: '6dbbd34d-901d-45d6-aeb5-7027bce7db1e',
-    redirectUri: 'http://localhost:3000'
+    authority: process.env.REACT_APP_AZURE_AUTH,
+    clientId: process.env.REACT_APP_CLIENT_ID,
+    redirectUri: process.env.REACT_APP_REDIRECT_URL
   },
   cache: {
     cacheLocation: "sessionStorage",
